@@ -14,15 +14,12 @@ async function deleteMovieById(id) {
 async function getMoviesById(id) {
   return await Movies.get({ movieId: id }).go();
 }
-
 async function getAllMovies() {
   return await Movies.scan.go();
 }
-
 async function createMovie(addMovie) {
   await Movies.create(addMovie).go();
 }
-
 export {
   getAllMovies,
   getMoviesById,
